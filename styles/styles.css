@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+}
+
+.item {
+background-image: url('/icons/angular-icon-1.svg');
+background-size: contain;
+background-repeat: no-repeat;
+
+flex-basis: 10%;
+height: 100px;
+}
