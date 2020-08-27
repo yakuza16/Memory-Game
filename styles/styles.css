@@ -1,12 +1,113 @@
-.wrapper {
-    display: flex;
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.item {
-background-image: url('/icons/angular-icon-1.svg');
-background-size: contain;
-background-repeat: no-repeat;
+.game-wrapper {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-flex-basis: 10%;
+.game__card {
+flex-basis: 20%;
+border: 3px solid black;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
 height: 100px;
+transition: .3s;
+}
+
+
+
+.html-icon {
+    background-image: url('/icons/html5.svg');
+}
+.css-icon {
+    background-image: url('/icons/css3.svg');
+}
+.sass-icon {
+    background-image: url('/icons/sass-1.svg');
+}
+.github-icon {
+    background-image: url('/icons/github-1.svg');
+}
+.react-icon {
+    background-image: url('/icons/react-2.svg');
+}
+.redux-icon {
+    background-image: url('/icons/redux.svg');
+}
+.javascript-icon {
+    background-image: url('/icons/javascript-4.svg');
+}
+.vue-icon {
+    background-image: url('/icons/vue-9.svg');
+}
+.angular-icon {
+    background-image: url('/icons/angular-icon-1.svg');
+}
+.vsc-icon {
+    background-image: url('/icons/visual-studio-code-1.svg');
+}
+
+.hide {
+    background-image: url('/icons/off-white-logo.svg');
+
+    /* dać te deklaracje na sam dół później */
+}
+
+
+@media(orientation:landscape){
+    .game__card {
+        flex-basis: 25%;
+        height: 50px;
+        }
+}
+
+@media(min-width: 768px){
+    .game-wrapper {
+        margin-top: 180px;
+    }
+
+    .game__card {
+        height: 160px;
+        }
+}
+
+@media(min-width: 1024px){
+    .game-wrapper {
+        margin-top: 110px;
+    }
+
+    .game__card {
+        height: 110px;
+        }
+}
+
+@media(min-width: 1200px){
+    .game-wrapper {
+        width: 74vw;
+        margin-top: 160px;
+    }
+
+    .game__card {
+        height: 143px;
+        }
+}
+
+@media(min-width: 1400px){
+    .game-wrapper {
+        width: 70vw;
+        margin-top: 160px;
+    }
+
+    .game__card {
+        height: 160px;
+        }
 }
