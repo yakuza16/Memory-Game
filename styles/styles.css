@@ -29,9 +29,12 @@ sans-serif; */
     background-position: center;
     background-repeat: no-repeat;
     height: 100px;
-    transition: .3s;
+    transition: .2s;
 }
 
+.game__card:hover {
+    background-color: rgb(155, 202, 84);
+}
 
 
 .html-icon {
@@ -76,6 +79,7 @@ sans-serif; */
 
 .hide {
     background-image: url('/icons/off-white-logo.svg');
+    transform: rotateY(180deg);
 }
 
 .match {

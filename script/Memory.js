@@ -1,6 +1,7 @@
 class MemoryGame {
     constructor() {
         this.showCard = this.showCard.bind(this);
+        
     }
     gameboardSelector = '.game-wrapper'
     cards = null;
@@ -27,14 +28,20 @@ class MemoryGame {
         "vsc-icon",
         "vsc-icon",
     ];
+    initialGameTime = null;
+    endGameTime = null;
     gameboard = null;
     pickedCards = [];
+    timeHideElementsInitialize = 3000;
+    timeHideElements = 320;
+    maxPoints = 10;
     points = 0;
 
     initializeApp() {
         this.grabElements();
         this.boundCardsWithLogos();
         this.waitForHidingElements();
+        this.initialGameTime = Date.now();
     }
     grabElements() {
         this.cards = [...document.querySelectorAll(this.allCardsSelector)];
@@ -48,7 +55,7 @@ class MemoryGame {
     }
 
     waitForHidingElements() {
-        setTimeout(() => this.hideAllCards(), 3000);
+        setTimeout(() => this.hideAllCards(), this.timeHideElementsInitialize);
     }
 
     boundCardsWithLogos() {
@@ -91,13 +98,17 @@ class MemoryGame {
                 });
                 this.pickedCards = [];
                 this.addEventListeners();
-            }, 250);
+            }, this.timeHideElements);
         }
-        if (this.points === 10) {
+        if (this.points === this.maxPoints) {
+            this.endGameTime = Date.now();
             const modal = new WinningModal()
-            modal.modalInit(this.gameboard, this.points)
-
+            modal.modalInit(this.gameboard, this.points, this.showGameTime());
         }
+    }
+
+    showGameTime(){
+        return Number(((this.endGameTime - this.initialGameTime)/1000).toFixed())
     }
 
     removeListener(card) {
