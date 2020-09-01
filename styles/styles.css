@@ -33,10 +33,10 @@ sans-serif; */
 }
 
 .game__card:hover {
-    background-color: rgb(155, 202, 84);
+    background-color: #ddd;
 }
 
-
+/*You can add more of them, but the class name must end with: '-icon' */
 .html-icon {
     background-image: url('/icons/html5.svg');
 }
@@ -83,7 +83,7 @@ sans-serif; */
 }
 
 .match {
-    background-color: rgb(155, 202, 84);
+    background-color: #ddd;
 }
 
 .modal {
