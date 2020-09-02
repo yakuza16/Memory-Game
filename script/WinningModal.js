@@ -7,9 +7,8 @@ class WinningModal {
 
     modalCreation(gameboard, points, time) {
         const modal = document.createElement('div');
-        modal.classList.add('modal')
-
-        this.modalContent(modal, points, time)
+        modal.classList.add('modal');
+        this.modalContent(modal, points, time);
         gameboard.appendChild(modal);
     }
 
@@ -23,9 +22,5 @@ class WinningModal {
 
     restartGame() {
         document.querySelector('[data-playAgain]').addEventListener('click', () => location.reload());
-
     }
-
-
-
 }

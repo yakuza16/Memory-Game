@@ -2,7 +2,7 @@ class MemoryGame {
     constructor() {
         this.showCard = this.showCard.bind(this);
     }
-    gameboardSelector = '.game-wrapper'
+    gameboardSelector = '.game-wrapper';
     cards = null;
     allCardsSelector = "[data-card]";
     possibleCSSclasses = null;
@@ -21,11 +21,11 @@ class MemoryGame {
         this.boundCardsWithLogos();
         this.waitForHidingElements();
         this.initialGameTime = Date.now();
-
     }
+
     grabElements() {
         this.cards = [...document.querySelectorAll(this.allCardsSelector)];
-        this.gameboard = document.querySelector(this.gameboardSelector)
+        this.gameboard = document.querySelector(this.gameboardSelector);
     }
     hideAllCards() {
         this.cards.forEach((card) => {
@@ -63,7 +63,6 @@ class MemoryGame {
                 this.removeListener(card);
             });
             this.points++;
-            // console.log(this.points);
             this.pickedCards = [];
         } else if (this.pickedCards.length === 2 &&
             firstCard.className !== secondCard.className) {
@@ -77,13 +76,13 @@ class MemoryGame {
         }
         if (this.points === this.maxPoints) {
             this.endGameTime = Date.now();
-            const modal = new WinningModal()
+            const modal = new WinningModal();
             modal.modalInit(this.gameboard, this.points, this.showGameTime());
         }
     }
 
     showGameTime() {
-        return Number(((this.endGameTime - this.initialGameTime) / 1000).toFixed())
+        return Number(((this.endGameTime - this.initialGameTime) / 1000).toFixed());
     }
 
     removeListener(card) {
@@ -91,20 +90,20 @@ class MemoryGame {
     }
 
     getClassnameForIcons() {
-        const allIconsOnce = []
-        const icons = []
-        const allStyles = [...document.styleSheets[0].rules]
+        const allIconsOnce = [];
+        const icons = [];
+        const allStyles = [...document.styleSheets[0].rules];
         allStyles.forEach((item) => {
             if (item.selectorText) {
                 icons.push(item.selectorText)
             }
-        })
+        });
         icons.filter(item => {
             if (item.includes('-icon')) {
-                allIconsOnce.push(item)
+                allIconsOnce.push(item);
             }
         })
         const doubleIconsArray = [...allIconsOnce, ...allIconsOnce].join('').split('.').slice(1);
-        this.possibleCSSclasses = doubleIconsArray
+        this.possibleCSSclasses = doubleIconsArray;
     }
 }

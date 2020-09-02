@@ -12,6 +12,10 @@ sans-serif; */
     box-sizing: border-box;
 }
 
+body {
+    max-height: 100vh;
+}
+
 .appTitle {
     font-size: 20px;
     width: 100%;
@@ -134,15 +138,12 @@ sans-serif; */
     font-size: 21px;
     color: rgba(18, 190, 50, 0.849);
     font-weight: bold;
-    
 }
 
 .modal__button:hover {
     color: #fff;
     background-color: #000;
     cursor: pointer;
-
-
 }
 
 @media(orientation:landscape) {
@@ -169,7 +170,7 @@ sans-serif; */
     }
 
     .game-wrapper {
-        margin-top: 140px;
+        margin-top: 75px;
     }
 
     .game__card {
@@ -203,6 +204,7 @@ sans-serif; */
         height: 143px;
     }
 }
+
 @media(min-width: 1400px) {
     .appTitle {
         font-size: 60px;
@@ -215,6 +217,6 @@ sans-serif; */
     }
 
     .game__card {
-        height: 150px;
+        height: 140px;
     }
 }
