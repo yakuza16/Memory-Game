@@ -47,7 +47,11 @@ class MemoryGame {
     }
 
     addEventListeners() {
-        this.cards.forEach((card) => card.addEventListener("click", this.showCard));
+        this.cards.forEach((card) => {
+            if (card.className === 'match') {
+                this.removeListener(card)
+            } else card.addEventListener("click", this.showCard)
+        });
     }
 
     showCard(e) {
@@ -55,12 +59,17 @@ class MemoryGame {
         let firstCard = this.pickedCards[0];
         let secondCard = this.pickedCards[1];
         this.removeListener(firstCard);
+        if (secondCard) {
+            this.removeListener(secondCard)
+        }
+
         e.target.classList.remove("hide");
         if (this.pickedCards.length === 2 &&
             firstCard.className === secondCard.className) {
             this.pickedCards.forEach((card) => {
-                card.classList.add("match");
                 this.removeListener(card);
+                card.classList.add("match");
+
             });
             this.points++;
             this.pickedCards = [];
@@ -68,6 +77,7 @@ class MemoryGame {
             firstCard.className !== secondCard.className) {
             setTimeout(() => {
                 this.pickedCards.forEach((card) => {
+                    this.removeListener(card)
                     card.classList.add("hide");
                 });
                 this.pickedCards = [];

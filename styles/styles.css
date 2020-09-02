@@ -6,214 +6,214 @@ sans-serif; */
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    max-height: 100vh;
+  max-height: 100vh;
 }
 
 .appTitle {
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 30px;
-    font-family: "Lexend Peta", sans-serif;
-    user-select: none;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-family: "Lexend Peta", sans-serif;
+  user-select: none;
 }
 
 .game-wrapper {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .game__card {
-    flex-basis: 20%;
-    border: 3px solid black;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100px;
-    transition: 0.2s;
+  flex-basis: 20%;
+  border: 3px solid black;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  transition: 0.2s;
 }
 
 .game__card:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /*You can add more of them, but the class name must end with: '-icon' */
 .html-icon {
-    background-image: url("../icons/html5.svg");
+  background-image: url("../icons/html5.svg");
 }
 
 .css-icon {
-    background-image: url("../icons/css3.svg");
+  background-image: url("../icons/css3.svg");
 }
 
 .sass-icon {
-    background-image: url("../icons/sass-1.svg");
+  background-image: url("../icons/sass-1.svg");
 }
 
 .github-icon {
-    background-image: url("../icons/github-1.svg");
+  background-image: url("../icons/github-1.svg");
 }
 
 .react-icon {
-    background-image: url("../icons/react-2.svg");
+  background-image: url("../icons/react-2.svg");
 }
 
 .redux-icon {
-    background-image: url("../icons/redux.svg");
+  background-image: url("../icons/redux.svg");
 }
 
 .javascript-icon {
-    background-image: url("../icons/javascript-4.svg");
+  background-image: url("../icons/javascript-4.svg");
 }
 
 .vue-icon {
-    background-image: url("../icons/vue-9.svg");
+  background-image: url("../icons/vue-9.svg");
 }
 
 .angular-icon {
-    background-image: url("../icons/angular-icon-1.svg");
+  background-image: url("../icons/angular-icon-1.svg");
 }
 
 .vsc-icon {
-    background-image: url("../icons/visual-studio-code-1.svg");
+  background-image: url("../icons/visual-studio-code-1.svg");
 }
 
 .hide {
-    background-image: url("../icons/off-white-logo.svg");
-    transform: rotateY(180deg);
+  background-image: url("../icons/off-white-logo.svg");
+  transform: rotateY(180deg);
 }
 
 .match {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .modal {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(119, 94, 94);
-    color: #fff;
-    font-family: "Lexend Peta", sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(119, 94, 94);
+  color: #fff;
+  font-family: "Lexend Peta", sans-serif;
 }
 
-.modal>* {
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 30px;
-    user-select: none;
-    font-size: 18px;
+.modal > * {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 30px 20px 0;
+  user-select: none;
+  font-size: 18px;
 }
 
 .modal__button {
-    flex-basis: auto;
-    text-transform: uppercase;
-    padding: 10px 25px;
-    font-size: 35px;
-    font-weight: bold;
-    border-radius: 30px;
-    border: 4px solid black;
-    transition: 0.3s linear;
+  flex-basis: auto;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  font-size: 35px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 4px solid black;
+  transition: 0.3s linear;
 }
 
 .modal__info span {
-    font-size: 21px;
-    color: rgba(18, 190, 50, 0.849);
-    font-weight: bold;
+  font-size: 21px;
+  color: rgba(18, 190, 50, 0.849);
+  font-weight: bold;
 }
 
 .modal__button:hover {
-    color: #fff;
-    background-color: #000;
-    cursor: pointer;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
 }
 
 @media (orientation: landscape) {
-    .appTitle {
-        font-size: 18px;
-        margin-top: 15px;
-    }
+  .appTitle {
+    font-size: 18px;
+    margin-top: 15px;
+  }
 
-    .game-wrapper {
-        margin-top: 20px;
-    }
+  .game-wrapper {
+    margin-top: 20px;
+  }
 
-    .game__card {
-        flex-basis: 25%;
-        height: 50px;
-    }
+  .game__card {
+    flex-basis: 25%;
+    height: 50px;
+  }
 }
 
 @media (min-width: 768px) {
-    .appTitle {
-        font-size: 40px;
-        margin-top: 75px;
-    }
+  .appTitle {
+    font-size: 40px;
+    margin-top: 75px;
+  }
 
-    .game-wrapper {
-        margin-top: 75px;
-    }
+  .game-wrapper {
+    margin-top: 75px;
+  }
 
-    .game__card {
-        height: 160px;
-    }
+  .game__card {
+    height: 160px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .game-wrapper {
-        margin-top: 110px;
-    }
+  .game-wrapper {
+    margin-top: 110px;
+  }
 
-    .game__card {
-        height: 110px;
-    }
+  .game__card {
+    height: 110px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .appTitle {
-        font-size: 50px;
-        margin-top: 105px;
-    }
+  .appTitle {
+    font-size: 50px;
+    margin-top: 105px;
+  }
 
-    .game-wrapper {
-        width: 74vw;
-        margin-top: 80px;
-    }
+  .game-wrapper {
+    width: 74vw;
+    margin-top: 80px;
+  }
 
-    .game__card {
-        height: 143px;
-    }
+  .game__card {
+    height: 143px;
+  }
 }
 
 @media (min-width: 1400px) {
-    .appTitle {
-        font-size: 60px;
-        margin-top: 95px;
-    }
+  .appTitle {
+    font-size: 60px;
+    margin-top: 95px;
+  }
 
-    .game-wrapper {
-        width: 70vw;
-        margin-top: 30px;
-    }
+  .game-wrapper {
+    width: 70vw;
+    margin-top: 30px;
+  }
 
-    .game__card {
-        height: 140px;
-    }
+  .game__card {
+    height: 140px;
+  }
 }
