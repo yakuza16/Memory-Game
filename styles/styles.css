@@ -52,47 +52,47 @@ body {
 
 /*You can add more of them, but the class name must end with: '-icon' */
 .html-icon {
-    background-image: url('/icons/html5.svg');
+    background-image: url('./icons/html5.svg');
 }
 
 .css-icon {
-    background-image: url('/icons/css3.svg');
+    background-image: url('./icons/css3.svg');
 }
 
 .sass-icon {
-    background-image: url('/icons/sass-1.svg');
+    background-image: url('./icons/sass-1.svg');
 }
 
 .github-icon {
-    background-image: url('/icons/github-1.svg');
+    background-image: url('./icons/github-1.svg');
 }
 
 .react-icon {
-    background-image: url('/icons/react-2.svg');
+    background-image: url('./icons/react-2.svg');
 }
 
 .redux-icon {
-    background-image: url('/icons/redux.svg');
+    background-image: url('./icons/redux.svg');
 }
 
 .javascript-icon {
-    background-image: url('/icons/javascript-4.svg');
+    background-image: url('./icons/javascript-4.svg');
 }
 
 .vue-icon {
-    background-image: url('/icons/vue-9.svg');
+    background-image: url('./icons/vue-9.svg');
 }
 
 .angular-icon {
-    background-image: url('/icons/angular-icon-1.svg');
+    background-image: url('./icons/angular-icon-1.svg');
 }
 
 .vsc-icon {
-    background-image: url('/icons/visual-studio-code-1.svg');
+    background-image: url('./icons/visual-studio-code-1.svg');
 }
 
 .hide {
-    background-image: url('/icons/off-white-logo.svg');
+    background-image: url('./icons/off-white-logo.svg');
     transform: rotateY(180deg);
 }
 
