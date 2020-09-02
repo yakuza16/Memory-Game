@@ -1,2 +1,2 @@
 const game = new MemoryGame();
-game.initializeApp();
+document.addEventListener('DOMContentLoaded', game.initializeApp())
