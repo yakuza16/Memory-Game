@@ -12,10 +12,20 @@ sans-serif; */
     box-sizing: border-box;
 }
 
+.appTitle {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-family: 'Lexend Peta', sans-serif;
+    user-select: none;
+}
+
 .game-wrapper {
     position: relative;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
@@ -105,6 +115,8 @@ sans-serif; */
     flex-basis: 100%;
     text-align: center;
     margin-top: 30px;
+    user-select: none;
+    font-size: 18px;
 }
 
 .modal__button {
@@ -118,14 +130,32 @@ sans-serif; */
     transition: .3s linear;
 }
 
+.modal__info span {
+    font-size: 21px;
+    color: rgba(18, 190, 50, 0.849);
+    font-weight: bold;
+    
+}
+
 .modal__button:hover {
     color: #fff;
     background-color: #000;
+    cursor: pointer;
 
 
 }
 
 @media(orientation:landscape) {
+
+    .appTitle {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .game-wrapper {
+        margin-top: 20px;
+    }
+
     .game__card {
         flex-basis: 25%;
         height: 50px;
@@ -133,8 +163,13 @@ sans-serif; */
 }
 
 @media(min-width: 768px) {
+    .appTitle {
+        font-size: 40px;
+        margin-top: 75px;
+    }
+
     .game-wrapper {
-        margin-top: 180px;
+        margin-top: 140px;
     }
 
     .game__card {
@@ -153,20 +188,30 @@ sans-serif; */
 }
 
 @media(min-width: 1200px) {
+
+    .appTitle {
+        font-size: 50px;
+        margin-top: 105px;
+    }
+
     .game-wrapper {
         width: 74vw;
-        margin-top: 160px;
+        margin-top: 80px;
     }
 
     .game__card {
         height: 143px;
     }
 }
-
 @media(min-width: 1400px) {
+    .appTitle {
+        font-size: 60px;
+        margin-top: 95px;
+    }
+
     .game-wrapper {
         width: 70vw;
-        margin-top: 160px;
+        margin-top: 30px;
     }
 
     .game__card {

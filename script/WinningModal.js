@@ -16,7 +16,7 @@ class WinningModal {
     modalContent(modal, points, time) {
         modal.innerHTML = `
         <h3 class="modal__header">Gratulations</h3>
-        <p class="modal__info">Your score is <span>${points} points </span> in <span>${time} seconds</span></p>
+        <p class="modal__info">Your score is <span>${points}</span> points  in <span>${time}</span> seconds.</p>
         <button data-playAgain class="modal__button">Play again</button>
         `
     }
