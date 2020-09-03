@@ -48,9 +48,10 @@ class MemoryGame {
 
     addEventListeners() {
         this.cards.forEach((card) => {
-            if (card.className === 'match') {
-                this.removeListener(card)
-            } else card.addEventListener("click", this.showCard)
+           card.addEventListener("click", this.showCard)
+           if(card.className.includes('match')){
+               this.removeListener(card)
+           }
         });
     }
 
