@@ -1,8 +1,12 @@
-class MemoryGame {
+import {
+    WinningModal
+} from "./WinningModal.js";
+
+export class MemoryGame {
     constructor() {
         this.showCard = this.showCard.bind(this);
     }
-    gameboardSelector = '.game-wrapper';
+    gameboardSelector = ".game-wrapper";
     allCardsSelector = "[data-card]";
     cards = null;
     possibleCSSclasses = null;
@@ -15,7 +19,6 @@ class MemoryGame {
     timeHideElements = 320;
     maxPoints = 10;
     points = 0;
-
 
     initializeApp() {
         this.grabElements();
@@ -51,9 +54,9 @@ class MemoryGame {
 
     addEventListeners() {
         this.cards.forEach((card) => {
-            card.addEventListener("click", this.showCard)
-            if (card.className.includes('match')) {
-                this.removeListener(card)
+            card.addEventListener("click", this.showCard);
+            if (card.className.includes("match")) {
+                this.removeListener(card);
             }
         });
     }
@@ -62,21 +65,25 @@ class MemoryGame {
         this.pickedCards.push(e.target);
         let firstCard = this.pickedCards[0];
         let secondCard = this.pickedCards[1];
-        this.removeListener(firstCard)
+        this.removeListener(firstCard);
         e.target.classList.remove("hide");
-        if (this.pickedCards.length === this.pickedCardsMaxLength &&
-            firstCard.className === secondCard.className) {
+        if (
+            this.pickedCards.length === this.pickedCardsMaxLength &&
+            firstCard.className === secondCard.className
+        ) {
             this.pickedCards.forEach((card) => {
                 this.removeListener(card);
-                card.classList.add("match")
+                card.classList.add("match");
             });
             this.points++;
             this.pickedCards = [];
-        } else if (this.pickedCards.length === this.pickedCardsMaxLength &&
-            firstCard.className !== secondCard.className) {
+        } else if (
+            this.pickedCards.length === this.pickedCardsMaxLength &&
+            firstCard.className !== secondCard.className
+        ) {
             setTimeout(() => {
                 this.pickedCards.forEach((card) => {
-                    this.removeListener(card)
+                    this.removeListener(card);
                     card.classList.add("hide");
                 });
                 this.pickedCards = [];
@@ -84,7 +91,7 @@ class MemoryGame {
             }, this.timeHideElements);
         }
         if (this.points === this.maxPoints) {
-            this.gameFinish()
+            this.gameFinish();
         }
     }
 
@@ -108,15 +115,18 @@ class MemoryGame {
         const allStyles = [...document.styleSheets[0].rules];
         allStyles.forEach((item) => {
             if (item.selectorText) {
-                icons.push(item.selectorText)
+                icons.push(item.selectorText);
             }
         });
-        icons.filter(item => {
-            if (item.includes('-icon')) {
+        icons.filter((item) => {
+            if (item.includes("-icon")) {
                 allIconsOnce.push(item);
             }
-        })
-        const doubleIconsArray = [...allIconsOnce, ...allIconsOnce].join('').split('.').slice(1);
+        });
+        const doubleIconsArray = [...allIconsOnce, ...allIconsOnce]
+            .join("")
+            .split(".")
+            .slice(1);
         this.possibleCSSclasses = doubleIconsArray;
     }
 }
