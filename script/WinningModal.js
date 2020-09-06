@@ -1,4 +1,4 @@
-class WinningModal {
+export class WinningModal {
 
     modalInit(gameboard, points, time) {
         this.modalCreation(gameboard, points, time);
