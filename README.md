@@ -1,4 +1,4 @@
-# [Memory Game](http://https://yakuza16.github.io/Memory-Game/ "Memory Game")
+# [Memory Game](https://yakuza16.github.io/Memory-Game/ "Memory Game")
 
 ![](https://cdn2.iconfinder.com/data/icons/artificial-intelligence-6/64/ArtificialIntelligence1-256.png)
 
