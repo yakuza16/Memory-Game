@@ -133,12 +133,6 @@ body {
   transition: 0.3s linear;
 }
 
-.modal__info span {
-  font-size: 21px;
-  color: rgba(18, 190, 50, 0.849);
-  font-weight: bold;
-}
-
 .modal__button:hover {
   color: #fff;
   background-color: #000;
